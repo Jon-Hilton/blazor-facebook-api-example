@@ -1,0 +1,19 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<button @onclick="ConnectToFacebook">Connect to Facebook</button>
+
+
+@code {
+    private void ConnectToFacebook()
+    {
+        // based on the steps listed here:
+        // https://developers.facebook.com/docs/facebook-login/guides/advanced/manual-flow
+        
+        var appId = "<your-facebook-app-id-here>";
+        var redirectUri = "https://localhost:7229/Authorization";
+        var stateParam = "someStateIfNeeded";
+        
+        NavigationManager.NavigateTo($"https://www.facebook.com/v15.0/dialog/oauth?client_id={appId}&redirect_uri={redirectUri}&state={stateParam}");
+    }
+}

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookAPIExample", "FacebookAPIExample\FacebookAPIExample.csproj", "{FF3E713D-6861-44F4-B57B-C24F34B43EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookAPIExample.Backend", "FacebookAPIExample.Backend\FacebookAPIExample.Backend.csproj", "{3B432C93-4282-4958-BBA8-88CCC6B13BDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF3E713D-6861-44F4-B57B-C24F34B43EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3E713D-6861-44F4-B57B-C24F34B43EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3E713D-6861-44F4-B57B-C24F34B43EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3E713D-6861-44F4-B57B-C24F34B43EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B432C93-4282-4958-BBA8-88CCC6B13BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B432C93-4282-4958-BBA8-88CCC6B13BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B432C93-4282-4958-BBA8-88CCC6B13BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B432C93-4282-4958-BBA8-88CCC6B13BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

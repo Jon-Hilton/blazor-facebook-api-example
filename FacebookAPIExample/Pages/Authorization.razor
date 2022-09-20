@@ -1,0 +1,51 @@
+﻿@page "/Authorization"
+@inject HttpClient client
+
+@if (success)
+{
+    <p>All done, thanks!</p>
+}
+else
+{
+    <p>Connecting...</p>
+}
+
+@code {
+
+    [SupplyParameterFromQuery]
+    [Parameter]
+    public string Code { get; set; } = "";
+
+    [SupplyParameterFromQuery(Name = "error_reason")]
+    [Parameter]
+    public string ErrorReason { get; set; }
+
+    [SupplyParameterFromQuery]
+    [Parameter]
+    public string Error { get; set; } = "";
+
+    [SupplyParameterFromQuery(Name = "error_description")]
+    [Parameter]
+    public string ErrorDescription { get; set; }
+
+
+    [SupplyParameterFromQuery(Name = "error_code")]
+    [Parameter]
+    public string ErrorCode { get; set; }
+
+    private bool success = false;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        if (!string.IsNullOrEmpty(Code))
+        {
+            // send the code to the backend API, where it can be exchanged for an access token...
+           var result = await client.PostAsJsonAsync("https://localhost:7246/integrations/facebook/authorize", new { Code = Code });
+            if (result.IsSuccessStatusCode)
+            {
+                success = true;
+            }
+        }
+    }
+
+}
